@@ -10,5 +10,6 @@ RUN npm install
 # Geri kalan dosyaları kopyala
 COPY . .
 
+EXPOSE 4000 
 # Konteyner başlatıldığında çalıştırılacak komut
 CMD ["node", "server.js"]
