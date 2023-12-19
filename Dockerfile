@@ -1,22 +1,15 @@
 # Node.js tabanlı bir Docker imajı kullanın
-FROM node:latest
-
-# Uygulama dizinini oluşturun
+FROM node: latest
+ 
 WORKDIR /app
-# Define the env variable `PORT`
-ENV PORT 4000
-
-# Expose the port 3000
-EXPOSE ${PORT}
-
-# package.json ve package-lock.json dosyalarını kopyalayın
-COPY package*.json ./
-
-# Bağımlılıkları yükleyin
+ 
+COPY package.json package.json
+COPY package-lock.json package-lock.json
+ 
 RUN npm install
+ 
+COPY . .
+ 
+CMD [ "node", "server.js" ]
 
-# Uygulama kodunu kopyalayın
-COPY . /app
 
-# Uygulamayı çalıştırın
-CMD ["node", "server.js"]
