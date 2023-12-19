@@ -1,15 +1,14 @@
-# Node.js tabanlı bir Docker imajı kullanın docker
-FROM node: latest
+# Node.js tabanlı bir Docker imajı kullanın
+FROM node:latest
 
 WORKDIR /app
- 
-COPY package.json package.json
-COPY package-lock.json package-lock.json
- 
+
+# package.json ve package-lock.json dosyalarını kopyala ve npm bağımlılıklarını yükle
+COPY package*.json ./
 RUN npm install
- 
+
+# Geri kalan dosyaları kopyala
 COPY . .
- 
-CMD [ "node", "server.js" ]
 
-
+# Konteyner başlatıldığında çalıştırılacak komut
+CMD ["node", "server.js"]
