@@ -1,6 +1,6 @@
-# Node.js tabanlı bir Docker imajı kullanın
+# Node.js tabanlı bir Docker imajı kullanın docker
 FROM node: latest
- 
+
 WORKDIR /app
  
 COPY package.json package.json
