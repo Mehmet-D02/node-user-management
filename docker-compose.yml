@@ -15,6 +15,7 @@ services:
 
   app:
     build:
+      command: npm start
       context: .
       dockerfile: Dockerfile
     ports:
