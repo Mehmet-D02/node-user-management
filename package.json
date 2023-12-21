@@ -1,13 +1,10 @@
-"scripts": {
- "start": "node server.js"
-}
-
 {
   "name": "node-express",
   "version": "1.0.0",
   "description": "accelerator-description",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "server": "node server.js"
   },
   "license": "Apache License, Version 2.0",
