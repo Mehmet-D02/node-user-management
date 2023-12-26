@@ -8,4 +8,4 @@ RUN npm install
 
 EXPOSE 4000 3306
 
-CMD [ "node", "run", "server.js" ]
+CMD [ "node", "server.js" ]
