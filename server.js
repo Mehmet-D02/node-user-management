@@ -30,6 +30,23 @@ const connection = mysql.createConnection({
   password: 'Admin123!'
 });
 
+connection.query(`
+  CREATE TABLE IF NOT EXISTS user (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    surname VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255)
+  )
+`, (error, results) => {
+  if (error) {
+    console.error("Error creating user table:", error);
+  } else {
+    console.log("User table created successfully");
+  }
+});
+
+
 // Define a route to retrieve all users
 app.get('/all', (req, res) => {
   // Select all users from the MySQL database
