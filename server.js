@@ -47,7 +47,6 @@ connection.query(`
 });
 
 
-
 // Define a route to retrieve all users
 app.get('/all', (req, res) => {
   // Select all users from the MySQL database
