@@ -55,7 +55,6 @@ app.listen(port, () => {
   console.log(`app listening at http://localhost:${port}`);
 });
 
-
 app.post('/add', (req, res) => {
   const { name, surname, email, password } = req.query;
 
