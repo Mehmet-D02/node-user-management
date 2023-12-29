@@ -23,7 +23,7 @@ const mysql = require('mysql2');
 
 // create the connection to database
 const connection = mysql.createConnection({
-  host: 'db-service.default.svc.cluster.local',
+  host: 'db-service',
   port: '3306',
   user: 'root',
   database: 'test',
