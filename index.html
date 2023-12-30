@@ -70,7 +70,7 @@
           async function fetchUserList() {
             try {
                 console.log("Fetching all users for reloading")
-                const response = await fetch('http://35.232.241.230/:4000/all');
+                const response = await fetch('http://104.154.162.2/:4000/all');
                 const users = await response.json();
                 console.log(users)
 
@@ -95,7 +95,7 @@
             });
 
             // Construct a URL with query parameters
-            const url = new URL('http://35.232.241.230/:4000/add');
+            const url = new URL('http://104.154.162.2/:4000/add');
             url.search = new URLSearchParams(userData).toString();
 
             // Send a POST request with query parameters
